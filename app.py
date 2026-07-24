@@ -130,6 +130,10 @@ def seed_data(cursor):
 with app.app_context():
     init_db()
 
+@app.route('/health')
+def health():
+    return jsonify({'status': 'ok'}), 200
+
 @app.route('/')
 def home():
     return render_template('index.html')

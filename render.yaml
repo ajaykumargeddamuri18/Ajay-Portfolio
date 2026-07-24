@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ajay-portfolio
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: FLASK_ENV
+        value: production
+      - key: TWILIO_ACCOUNT_SID
+        value: ACa9861d65d7b00cb011da4aed2b3f05dd
+      - key: TWILIO_AUTH_TOKEN
+        value: 5c781f4ac6b789f35a57d4c9b5d021ea
+      - key: TWILIO_PHONE_NUMBER
+        value: "+15075853198"
