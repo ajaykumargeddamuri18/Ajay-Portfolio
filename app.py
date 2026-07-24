@@ -15,8 +15,15 @@ try:
 except ImportError:
     pass
 
-app = Flask(__name__, static_folder='static', static_url_path='/static', template_folder='templates')
-DB_PATH = 'portfolio.db'
+# Use absolute paths so gunicorn on Render finds static/templates correctly
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+app = Flask(__name__,
+    static_folder=os.path.join(BASE_DIR, 'static'),
+    static_url_path='/static',
+    template_folder=os.path.join(BASE_DIR, 'templates'))
+
+DB_PATH = os.path.join(BASE_DIR, 'portfolio.db')
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -129,7 +136,7 @@ def home():
 
 @app.route('/assets/<path:filename>')
 def serve_assets(filename):
-    return send_from_directory('static/assets', filename)
+    return send_from_directory(os.path.join(BASE_DIR, 'static', 'assets'), filename)
 
 @app.route('/api/projects', methods=['GET'])
 def api_projects():
@@ -241,8 +248,8 @@ def api_analytics():
     row = cursor.fetchone()
     conn.close()
 
-    total_visits = row[0] if row else 1248
-    project_views = row[1] if row else 342
+    total_visits = row[0] if row else 0
+    project_views = row[1] if row else 0
     return jsonify({
         'status': 'success',
         'total_visits': total_visits,
