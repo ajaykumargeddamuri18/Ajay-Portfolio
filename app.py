@@ -119,6 +119,10 @@ def seed_data(cursor):
     ]
     cursor.executemany('INSERT INTO certifications (name, issuer, icon) VALUES (?, ?, ?)', certs_data)
 
+# Initialize DB at module level so gunicorn picks it up
+with app.app_context():
+    init_db()
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -258,7 +262,6 @@ def admin_messages():
     return jsonify({'count': len(messages), 'messages': messages})
 
 if __name__ == '__main__':
-    init_db()
     port = int(os.environ.get('PORT', 5000))
     debug = os.environ.get('FLASK_ENV', 'production') != 'production'
     print(f"Starting Flask Backend Portfolio Server on http://localhost:{port}")
