@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ajay Kumar Geddamuri - Dynamic Software Engineer & Data Science Specialist Portfolio">
+    <meta name="author" content="Ajay Kumar Geddamuri">
+    <title>Ajay Kumar Geddamuri | Software Engineer & Data Science Specialist</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- Header Glass Navbar -->
+    <header class="header-navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-brand">
+                <div class="logo-badge">AG</div>
+                <span class="logo-text">Ajay <span>Kumar</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <button class="btn btn-primary btn-sm" onclick="openResumeModal()">
+                    <i class="fa-solid fa-file-lines"></i> Resume
+                </button>
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (SEOWINS.io Cyber Blue UI Layout) -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="status-pill" style="background: rgba(37, 99, 235, 0.15); border-color: rgba(59, 130, 246, 0.4); color: #38bdf8; box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);">
+                            <span class="pulse-dot" style="background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></span>
+                            Software Engineer & Data Science Specialist ✦ 2023 – 2027
+                        </div>
+
+                        <h1 class="hero-title" style="font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; line-height: 1.22; margin-bottom: 1.25rem;">
+                            Hi, I'm <span style="color: #ffffff; text-shadow: 0 0 20px rgba(255,255,255,0.4); white-space: nowrap;">Ajay Kumar Geddamuri</span><br>
+                            <span style="display: block; line-height: 1.2;">
+                                <span class="typing-text" id="typing-text">Software Engineer</span><span class="typing-cursor"></span>
+                            </span>
+                        </h1>
+
+                        <p class="hero-description" style="font-size: 1.08rem; color: #94a3b8; line-height: 1.7; margin-bottom: 2rem; max-width: 620px;">
+                            B.Tech CSE student (2023 – 2027) passionate about building full-stack web applications, ServiceNow enterprise workflows, exploratory data analytics, and machine learning models.
+                        </p>
+
+                        <div class="hero-buttons" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <a href="#projects" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.02rem;">
+                                Explore Work <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+                            </a>
+                            <button class="btn btn-secondary" onclick="openResumeModal()" style="padding: 0.9rem 1.6rem; font-size: 1.02rem;">
+                                View Resume <i class="fa-solid fa-file-pdf"></i>
+                            </button>
+                            <button class="btn btn-ieee" onclick="openIEEEVideoModal()">
+                                <i class="fa-solid fa-circle-play"></i> IEEE Video
+                            </button>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin: 1.8rem 0; padding: 1rem 0; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); max-width: 620px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading); line-height: 1;">8.63</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 0.35rem;">B.TECH CGPA</div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading); line-height: 1;">2023–27</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 0.35rem;">ACADEMIC BATCH</div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading); line-height: 1;">4+</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 0.35rem;">MAJOR PROJECTS</div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading); line-height: 1;">6+</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 0.35rem;">CERTIFICATIONS</div>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem; max-width: 580px;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #cbd5e1; font-size: 0.88rem; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> ServiceNow CAD & CSA Certified
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #cbd5e1; font-size: 0.88rem; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> IEEE International Paper Author
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #cbd5e1; font-size: 0.88rem; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Python & AI ML Predictive Models
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; color: #cbd5e1; font-size: 0.88rem; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Full-Stack Django & Flask Backends
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEOWINS RIGHT SIDE: AJAY PORTRAIT + FLOATING TECH BADGES -->
+                    <div class="hero-image-wrapper">
+                        <div class="hero-portrait-aura"></div>
+
+                        <div class="avatar-glass-card">
+                            <img src="/static/assets/avatar.png" alt="Ajay Kumar Geddamuri" class="profile-image-img">
+                        </div>
+
+                        <!-- Floating SEOWINS Orbiting Tech Badges -->
+                        <div class="seowins-badge badge-top-left">
+                            <div class="badge-icon"><i class="fa-solid fa-cloud" style="color: #38bdf8;"></i></div>
+                            <div>
+                                <div class="badge-text-primary">ServiceNow CAD</div>
+                                <div class="badge-text-sub">Certified Dev</div>
+                            </div>
+                        </div>
+
+                        <div class="seowins-badge badge-top-right">
+                            <div class="badge-icon"><i class="fa-brands fa-python" style="color: #38bdf8;"></i></div>
+                            <div>
+                                <div class="badge-text-primary">Python & AI</div>
+                                <div class="badge-text-sub">Data Science</div>
+                            </div>
+                        </div>
+
+                        <div class="seowins-badge badge-bottom-left">
+                            <div class="badge-icon"><i class="fa-solid fa-award" style="color: #818cf8;"></i></div>
+                            <div>
+                                <div class="badge-text-primary">IEEE Author</div>
+                                <div class="badge-text-sub">International Conf</div>
+                            </div>
+                        </div>
+
+                        <div class="seowins-badge badge-bottom-right">
+                            <div class="badge-icon"><i class="fa-solid fa-server" style="color: #10b981;"></i></div>
+                            <div>
+                                <div class="badge-text-primary">Django & SQL</div>
+                                <div class="badge-text-sub">Full-Stack API</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEOWINS 4-COLUMN FEATURE GRID SECTION -->
+        <section style="padding: 4rem 0; background: rgba(11, 20, 38, 0.4); border-top: 1px solid rgba(59, 130, 246, 0.2); border-bottom: 1px solid rgba(59, 130, 246, 0.2);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: #38bdf8; font-weight: 700;">Everything You Need to</span>
+                    <h2 style="font-size: 2.2rem; font-weight: 800; margin-top: 0.3rem;">Build & Scale Intelligent Systems</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.8rem;">
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition-smooth); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
+                        <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: rgba(37, 99, 235, 0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.6rem;">ServiceNow Enterprise</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">Official ServiceNow CAD & CSA Certified Administrator and Application Developer.</p>
+                    </div>
+
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition-smooth); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
+                        <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: rgba(37, 99, 235, 0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.6rem;">AI & Data Science</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">Exploratory data analytics, machine learning algorithms, and predictive intelligence models.</p>
+                    </div>
+
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition-smooth); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
+                        <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: rgba(37, 99, 235, 0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.6rem;">Full-Stack Python</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">Flask & Django REST APIs, SQLite/MySQL data management, and web system architectures.</p>
+                    </div>
+
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition-smooth); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
+                        <div style="width: 50px; height: 50px; border-radius: var(--radius-md); background: rgba(37, 99, 235, 0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.6rem;">IEEE Research Paper</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">Published 1st International IEEE Conference paper on Machine Learning predictive modeling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-user"></i> About Me</span>
+                    <h2 class="section-title">Driven by Engineering & Data</h2>
+                    <p class="section-subtitle">Academic record and professional engineering aspirations</p>
+                </div>
+
+                <div class="about-glass-box">
+                    <div class="about-content-grid">
+                        <div class="about-text">
+                            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 1rem;">Career Objective</h3>
+                            <p style="margin-bottom: 1.2rem;">
+                                I am a final-year B.Tech Computer Science and Engineering student (<strong>Academic Period: 2023 – 2027</strong>) at <strong>Ramachandra College of Engineering</strong> holding an <strong>8.63 CGPA</strong>. My technical focus lies in software engineering, data science, machine learning algorithms, and database architecture.
+                            </p>
+                            <p>
+                                I am looking for an engineering role where I can apply strong technical skills, collaborate with experienced professionals, and build scalable, data-driven applications.
+                            </p>
+                        </div>
+
+                        <div class="about-highlight-box">
+                            <div class="info-row">
+                                <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <div class="info-label">Degree</div>
+                                    <div class="info-val">B.Tech CSE (8.63 CGPA)</div>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                <div>
+                                    <div class="info-label">Academic Duration</div>
+                                    <div class="info-val">2023 – 2027</div>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="info-icon"><i class="fa-solid fa-building-columns"></i></div>
+                                <div>
+                                    <div class="info-label">College</div>
+                                    <div class="info-val">Ramachandra College of Eng.</div>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <div>
+                                    <div class="info-label">Internship</div>
+                                    <div class="info-val">Data Science Intern @ Genz Educate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-gears"></i> Technical Stack</span>
+                    <h2 class="section-title">Skills & Capabilities</h2>
+                    <p class="section-subtitle">Core technical proficiencies and soft skills</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3 class="skill-card-title">Languages</h3>
+                        </div>
+                        <div class="skills-tags-wrapper">
+                            <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="skill-pill"><i class="fa-solid fa-c"></i> C Language</span>
+                            <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Science & ML -->
+                    <div class="skill-category-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3 class="skill-card-title">Data Science & ML</h3>
+                        </div>
+                        <div class="skills-tags-wrapper">
+                            <span class="skill-pill"><i class="fa-solid fa-square-poll-vertical"></i> EDA Preprocessing</span>
+                            <span class="skill-pill"><i class="fa-solid fa-brain"></i> Scikit-Learn</span>
+                            <span class="skill-pill"><i class="fa-solid fa-table"></i> Pandas & NumPy</span>
+                            <span class="skill-pill"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & Platforms -->
+                    <div class="skill-category-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fa-solid fa-cloud"></i></div>
+                            <h3 class="skill-card-title">Cloud & Tools</h3>
+                        </div>
+                        <div class="skills-tags-wrapper">
+                            <span class="skill-pill"><i class="fa-solid fa-cloud-arrow-up"></i> Cloud Computing</span>
+                            <span class="skill-pill"><i class="fa-solid fa-cogs"></i> ServiceNow Admin</span>
+                            <span class="skill-pill"><i class="fa-solid fa-code-branch"></i> ServiceNow App Dev</span>
+                            <span class="skill-pill"><i class="fa-brands fa-github"></i> Git & GitHub</span>
+                            <span class="skill-pill"><i class="fa-solid fa-chart-column"></i> Power BI</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon"><i class="fa-solid fa-users-gear"></i></div>
+                            <h3 class="skill-card-title">Soft Skills</h3>
+                        </div>
+                        <div class="skills-tags-wrapper">
+                            <span class="skill-pill"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                            <span class="skill-pill"><i class="fa-solid fa-comments"></i> Communication</span>
+                            <span class="skill-pill"><i class="fa-solid fa-display"></i> Presentation</span>
+                            <span class="skill-pill"><i class="fa-solid fa-book-open"></i> Self-learning</span>
+                            <span class="skill-pill"><i class="fa-solid fa-sliders"></i> Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world web applications and intelligent machine learning systems</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Smart Supermarket Management System (LIVE) -->
+                    <div class="project-card">
+                        <div class="project-banner">
+                            <div class="project-banner-bg"></div>
+                            <i class="fa-solid fa-store project-banner-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <h3>Smart Supermarket System</h3>
+                                <span style="font-size: 0.75rem; padding: 0.2rem 0.6rem; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); color: var(--emerald-neon); border-radius: 20px; font-weight: 700;">LIVE</span>
+                            </div>
+                            <p>A full-stack supermarket management system developed to simplify retail store operations and inventory management. Includes secure role-based authentication, sales tracking, automated reporting, and responsive dashboards.</p>
+                            <div class="project-tech">
+                                <span>Full-Stack</span>
+                                <span>Python / SQL</span>
+                                <span>Authentication</span>
+                                <span>Sales Analytics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://super-market-management-system-khaki.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-live">
+                                    <span class="pulse-dot-live"></span> Go to Live
+                                </a>
+                                <a href="https://github.com/ajaykumargeddamuri18" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Event Hub Website (LIVE) -->
+                    <div class="project-card">
+                        <div class="project-banner">
+                            <div class="project-banner-bg"></div>
+                            <i class="fa-solid fa-calendar-check project-banner-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <h3>Event Hub Website</h3>
+                                <span style="font-size: 0.75rem; padding: 0.2rem 0.6rem; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); color: var(--emerald-neon); border-radius: 20px; font-weight: 700;">LIVE</span>
+                            </div>
+                            <p>EventHub is a smart event management platform that simplifies event creation, ticket booking, and attendee management. It offers secure user authentication, online registrations, dynamic QR-based tickets, and real-time event tracking.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>Node.js / Express</span>
+                                <span>QR Tickets</span>
+                                <span>Web UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://event-hub-arjx.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-live">
+                                    <span class="pulse-dot-live"></span> Go to Live
+                                </a>
+                                <a href="https://github.com/ajaykumargeddamuri18" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Predictive Maintenance for Industrial Equipment -->
+                    <div class="project-card">
+                        <div class="project-banner">
+                            <div class="project-banner-bg"></div>
+                            <i class="fa-solid fa-industry project-banner-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Predictive Maintenance System</h3>
+                            <p>Developed a Machine Learning-based Predictive Maintenance System for industrial machinery. Utilized telemetry data analytics to predict equipment failures before downtime occurs, significantly improving maintenance scheduling and reliability.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Scikit-learn</span>
+                                <span>Pandas & NumPy</span>
+                                <span>Telemetry EDA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajaykumargeddamuri18/Machine-Failure-Detection" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fa-brands fa-github"></i> View GitHub Repository <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Fraud Detection in Financial Transactions -->
+                    <div class="project-card">
+                        <div class="project-banner">
+                            <div class="project-banner-bg"></div>
+                            <i class="fa-solid fa-shield-halved project-banner-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Machine Failure Detection & Fraud Analysis</h3>
+                            <p>Developed a Machine Learning-based Machine Failure & Anomaly Detection System to identify anomalous operational patterns and financial transaction irregularities while minimizing false alarm rates.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Anomaly Detection</span>
+                                <span>Predictive Analytics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajaykumargeddamuri18/Machine-Failure-Detection" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    <i class="fa-brands fa-github"></i> View GitHub Repository <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-route"></i> Career Journey</span>
+                    <h2 class="section-title">Experience & Timeline</h2>
+                    <p class="section-subtitle">Practical industry experience and workshops</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>B.Tech in Computer Science & Engineering</h3>
+                                <span class="company">Ramachandra College of Engineering</span>
+                                <span class="period">2023 – 2027</span>
+                            </div>
+                            <p>
+                                Currently in final year of B.Tech CSE with an <strong>8.63 CGPA</strong>. Specializing in Software Engineering, Data Science, Machine Learning algorithms, and scalable web architecture.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Data Science Intern</h3>
+                                <span class="company">Genz Educate Wing</span>
+                                <span class="period">June – August 2025</span>
+                            </div>
+                            <p>
+                                Gained hands-on experience in data preprocessing, exploratory data analysis (EDA), and building machine learning models using Python libraries such as Pandas, NumPy, and Scikit-learn. Worked on real-world datasets to perform data cleaning, visualization, and model evaluation, strengthening analytical, problem-solving, and data-driven decision-making skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workshops-box">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 0;"><i class="fa-solid fa-award"></i> Hackathons, Workshops & Achievements</h3>
+                        <button class="btn btn-ieee btn-sm" onclick="openIEEEVideoModal()">
+                            <i class="fa-solid fa-circle-play"></i> Watch IEEE Presentation Video
+                        </button>
+                    </div>
+
+                    <div class="workshops-grid-items">
+                        <div class="workshop-card-item"><i class="fa-solid fa-circle-check"></i> Agentic AI - prakalp (RCE)</div>
+                        <div class="workshop-card-item"><i class="fa-solid fa-circle-check"></i> Cyber Security - Synthoquest pvt ltd</div>
+                        <div class="workshop-card-item"><i class="fa-solid fa-circle-check"></i> Cutting Edge Tools - CSI</div>
+                        <div class="workshop-card-item"><i class="fa-solid fa-circle-check"></i> Power BI - Office Masters</div>
+                        <div class="workshop-card-item"><i class="fa-solid fa-circle-check"></i> AI Tools - Be 10x</div>
+                        <div class="workshop-card-item"><i class="fa-solid fa-circle-check"></i> Git & GitHub - Lets Upgrade</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION (CLICKABLE CARDS) -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-award"></i> Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <p class="section-subtitle">Click any certificate to view credential details and official PDF document</p>
+                </div>
+
+                <div class="certs-grid-container">
+                    <div class="cert-card-clickable" onclick="openCertModal('servicenow_sysadmin')">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-main);">Certified System Administrator (CSA)</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-subtle);">ServiceNow • Official PDF Certificate</span>
+                        </div>
+                        <div class="cert-view-badge">View PDF <i class="fa-solid fa-file-pdf"></i></div>
+                    </div>
+
+                    <div class="cert-card-clickable" onclick="openCertModal('servicenow_appdev')">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-code-branch"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-main);">Certified Application Developer (CAD)</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-subtle);">ServiceNow • Official PDF Certificate</span>
+                        </div>
+                        <div class="cert-view-badge">View PDF <i class="fa-solid fa-file-pdf"></i></div>
+                    </div>
+
+                    <div class="cert-card-clickable" onclick="openCertModal('java_coursera')">
+                        <div class="cert-badge-icon"><i class="fa-brands fa-java"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-main);">Java Programming</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-subtle);">Coursera – Learn Quest</span>
+                        </div>
+                        <div class="cert-view-badge">View <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+
+                    <div class="cert-card-clickable" onclick="openCertModal('python_cisco')">
+                        <div class="cert-badge-icon"><i class="fa-brands fa-python"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-main);">Python Course</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-subtle);">Cisco</span>
+                        </div>
+                        <div class="cert-view-badge">View <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+
+                    <div class="cert-card-clickable" onclick="openCertModal('cloud_simplilearn')">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-main);">Cloud Computing</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-subtle);">Simplilearn</span>
+                        </div>
+                        <div class="cert-view-badge">View <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+
+                    <div class="cert-card-clickable" onclick="openCertModal('prompt_infosys')">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-main);">Prompt Engineering</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-subtle);">Infosys Spring Board</span>
+                        </div>
+                        <div class="cert-view-badge">View <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEOWINS LAPTOP SHOWCASE MOCKUP SECTION -->
+        <section style="padding: 5rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+                    <!-- Laptop Mockup Display Container -->
+                    <div style="background: rgba(15, 23, 42, 0.8); border: 2px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(37, 99, 235, 0.25); position: relative; overflow: hidden;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <span style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+                            <span style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b; display: inline-block;"></span>
+                            <span style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+                            <span style="font-size: 0.8rem; color: #94a3b8; margin-left: 0.5rem; font-family: monospace;">ajay.dev/system-suite</span>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); padding: 1rem;">
+                                <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; margin-bottom: 0.3rem;">SYSTEM ARCHITECTURE</div>
+                                <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">Python Flask & Django</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem;">REST APIs & SQLite/MySQL</div>
+                            </div>
+
+                            <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); padding: 1rem;">
+                                <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; margin-bottom: 0.3rem;">CLOUD ENTERPRISE</div>
+                                <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">ServiceNow CAD & CSA</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem;">Workflows & Scripting</div>
+                            </div>
+
+                            <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); padding: 1rem;">
+                                <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; margin-bottom: 0.3rem;">MACHINE LEARNING</div>
+                                <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">Predictive Analytics</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem;">NumPy, Pandas, Scikit</div>
+                            </div>
+
+                            <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); padding: 1rem;">
+                                <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; margin-bottom: 0.3rem;">RESEARCH PAPER</div>
+                                <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">IEEE Presentation</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem;">1st International Conf</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column Description -->
+                    <div>
+                        <span style="padding: 0.3rem 0.8rem; background: rgba(37, 99, 235, 0.2); border: 1px solid #38bdf8; color: #38bdf8; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Inside Ajay's Engineering Suite</span>
+                        <h2 style="font-size: 2.4rem; font-weight: 800; margin: 0.8rem 0 1.2rem 0; line-height: 1.2;">
+                            Your Playbook for <span style="background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Engineering & Data Visibility</span>
+                        </h2>
+
+                        <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: #cbd5e1; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> High-performance Python & Django REST backends
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: #cbd5e1; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> ServiceNow enterprise cloud workflow automation
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: #cbd5e1; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Machine learning & exploratory data analytics pipelines
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.6rem; color: #cbd5e1; font-weight: 600;">
+                                <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> International IEEE research paper rigor & clean architecture
+                            </div>
+                        </div>
+
+                        <a href="#projects" class="btn btn-primary" style="padding: 0.9rem 2rem;">Explore Systems <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEOWINS TRUST & STATS + TESTIMONIAL GLASS BOX SECTION -->
+        <section style="padding: 5rem 0; background: rgba(11, 20, 38, 0.5); border-top: 1px solid rgba(59, 130, 246, 0.2); border-bottom: 1px solid rgba(59, 130, 246, 0.2);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+                    <!-- Left Side: Header & Stats -->
+                    <div>
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: #38bdf8; font-weight: 700;">Trusted by Academic Evaluators</span>
+                        <h2 style="font-size: 2.4rem; font-weight: 800; margin: 0.4rem 0 2rem 0; line-height: 1.2;">
+                            Proven Academic & <br><span style="background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Technical Track Record</span>
+                        </h2>
+
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                            <div>
+                                <div style="font-size: 2.2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading);">2023–27</div>
+                                <div style="font-size: 0.82rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.2rem;">Academic Tenure</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2.2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading);">2+ Certs</div>
+                                <div style="font-size: 0.82rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.2rem;">ServiceNow Official</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2.2rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading);">1st IEEE</div>
+                                <div style="font-size: 0.82rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.2rem;">Research Paper</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: SEOWINS Glass Testimonial Box -->
+                    <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-lg); padding: 2.2rem; position: relative; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+                            <div style="color: #f59e0b; font-size: 1.1rem; letter-spacing: 2px;">★★★★★</div>
+                            <div style="font-size: 2.5rem; color: rgba(56, 189, 248, 0.25); font-family: serif; line-height: 0;">”</div>
+                        </div>
+
+                        <p style="font-size: 1.02rem; color: #e2e8f0; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">
+                            "Ajay's approach to machine learning algorithms and full-stack software engineering is exceptional. His IEEE research paper and ServiceNow enterprise credentials demonstrate outstanding technical rigor."
+                        </p>
+
+                        <div style="display: flex; align-items: center; gap: 0.85rem;">
+                            <img src="/static/assets/avatar.png" alt="Ajay Kumar Geddamuri" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid #38bdf8;">
+                            <div>
+                                <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">Ajay Kumar Geddamuri</div>
+                                <div style="font-size: 0.78rem; color: #94a3b8;">Software Engineer & Data Specialist</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEOWINS BOTTOM CALLOUT BANNER SECTION -->
+        <section style="padding: 3rem 0;">
+            <div class="container">
+                <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.95) 100%); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-lg); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);">
+                    <div>
+                        <h3 style="font-size: 1.75rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">Looking for a Dedicated Software Engineer?</h3>
+                        <p style="color: #94a3b8; font-size: 0.98rem; margin-bottom: 0;">Open for software engineering roles, full-stack development, and data science collaborations.</p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <span style="font-size: 1.3rem; font-weight: 800; color: #38bdf8; font-family: var(--font-heading);">8.63 CGPA</span>
+                        <a href="#contact" class="btn btn-primary" style="padding: 0.85rem 2rem;">Get in Touch Now <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fa-solid fa-comments"></i> Get In Touch</span>
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="section-subtitle">Reach out for software engineering or data science opportunities</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let me know how I can help!</h3>
+                        <p>I'm always open to discussing new engineering roles, software projects, or data science collaborations. Feel free to contact me directly!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>ajaykumargeddamuri123@gmail.com</span>
+                                <button class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; margin-left: 0.5rem;" onclick="copyToClipboard('ajaykumargeddamuri123@gmail.com', 'Email')">Copy</button>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91 94949 53539</span>
+                                <button class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; margin-left: 0.5rem;" onclick="copyToClipboard('+919494953539', 'Phone Number')">Copy</button>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Eluru, Andhra Pradesh, India</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links-row">
+                            <a href="https://linkedin.com/in/ajay-kumar-geddamuri-0a373a348" target="_blank" rel="noopener noreferrer" class="social-link-circle" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/ajaykumargeddamuri18" target="_blank" rel="noopener noreferrer" class="social-link-circle" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--cyan-electric); font-weight: 700; margin-bottom: 1rem; padding: 0.4rem 0.8rem; background: rgba(16, 185, 129, 0.1); border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.25);">
+                            <i class="fa-solid fa-comment-sms"></i> Submissions send instant SMS via Twilio to +91 94949 53539
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        <!-- LIVE VISITOR & ENGAGEMENT ANALYTICS SECTION -->
+        <section id="visitor-analytics" style="padding: 3.5rem 0; background: rgba(11, 20, 38, 0.85); border-top: 1px solid rgba(59, 130, 246, 0.35); border-bottom: 1px solid rgba(59, 130, 246, 0.35);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: #10b981; font-weight: 700;">
+                        <i class="fa-solid fa-chart-line"></i> Real-Time Platform Insights
+                    </span>
+                    <h2 style="font-size: 2.2rem; font-weight: 800; margin-top: 0.3rem; color: #fff;">Live Website & Project Analytics</h2>
+                </div>
+
+                <div style="padding: 2rem 2.5rem; background: rgba(15, 23, 42, 0.95); border: 2px solid rgba(56, 189, 248, 0.45); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 2rem; max-width: 950px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(16, 185, 129, 0.3);">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(56, 189, 248, 0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1.5px solid #38bdf8;">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div style="text-align: left;">
+                            <div style="font-size: 1.9rem; font-weight: 800; color: #fff; line-height: 1; font-family: var(--font-heading);" id="total-visitors-count">1,248</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.35rem;">Total Website Visitors</div>
+                        </div>
+                    </div>
+
+                    <div style="height: 48px; width: 1px; background: rgba(255, 255, 255, 0.2);"></div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(168, 85, 247, 0.2); color: #c084fc; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1.5px solid #c084fc;">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <div style="text-align: left;">
+                            <div style="font-size: 1.9rem; font-weight: 800; color: #fff; line-height: 1; font-family: var(--font-heading);" id="project-views-count">342</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.35rem;">Project System Views</div>
+                        </div>
+                    </div>
+
+                    <div style="height: 48px; width: 1px; background: rgba(255, 255, 255, 0.2);"></div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(16, 185, 129, 0.2); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1.5px solid #10b981;">
+                            <i class="fa-solid fa-circle-dot"></i>
+                        </div>
+                        <div style="text-align: left;">
+                            <div style="font-size: 1.15rem; font-weight: 800; color: #10b981; line-height: 1;">Active System Live</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.35rem;">99.8% Response Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Ajay Kumar Geddamuri. All rights reserved.</p>
+                <p>Powered by Python Django, Flask & Twilio Messaging Backends</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- RESUME VIEWER MODAL -->
+    <div id="resume-modal" class="modal-overlay">
+        <div class="modal-content-box" style="max-width: 850px;">
+            <button class="modal-close-btn" onclick="closeModal('resume-modal')" aria-label="Close Resume Modal"><i class="fa-solid fa-xmark"></i></button>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+                <div>
+                    <h3 style="font-size: 1.6rem; margin-bottom: 0.2rem;">Ajay Kumar Geddamuri - Resume</h3>
+                    <span style="font-size: 0.85rem; color: var(--cyan-electric); font-weight: 600;">Software Engineer & Data Science Specialist</span>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <a href="/static/assets/resume.png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                        <i class="fa-solid fa-expand"></i> Open Full Image
+                    </a>
+                    <a href="/static/assets/resume.png" download="Ajay_Kumar_Geddamuri_Resume.png" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <div style="background: #000; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-glass); margin-bottom: 1rem; max-height: 600px; overflow-y: auto;">
+                <img src="/static/assets/resume.png" alt="Ajay Kumar Geddamuri Resume" style="width: 100%; display: block; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATE VIEWER MODAL -->
+    <div id="cert-modal" class="modal-overlay">
+        <div class="modal-content-box">
+            <button class="modal-close-btn" onclick="closeModal('cert-modal')" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="cert-modal-title" style="font-size: 1.5rem; margin-bottom: 0.3rem;">Certificate Title</h3>
+            <div id="cert-modal-issuer" style="font-size: 0.9rem; color: var(--cyan-electric); font-weight: 600; margin-bottom: 1.5rem;">Issuer</div>
+            <div id="cert-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- IEEE PRESENTATION VIDEO MODAL -->
+    <div id="ieee-video-modal" class="modal-overlay">
+        <div class="modal-content-box" style="max-width: 750px;">
+            <button class="modal-close-btn" onclick="closeModal('ieee-video-modal')" aria-label="Close Video Modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <span style="padding: 0.2rem 0.6rem; background: rgba(139,92,246,0.2); border: 1px solid var(--violet-neon); color: var(--violet-neon); border-radius: 20px; font-size: 0.75rem; font-weight: 700;">IEEE CONFERENCE</span>
+                <span style="font-size: 0.85rem; color: var(--text-subtle);">International Research Presentation</span>
+            </div>
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 1.25rem;">1st International IEEE Conference Presentation</h3>
+
+            <div class="video-container">
+                <video id="ieee-presentation-video" controls width="100%" style="border-radius: var(--radius-md); max-height: 440px; background: #000; width: 100%;">
+                    <source src="/static/assets/WhatsApp Video 2026-07-24 at 8.39.20 PM.mp4" type="video/mp4">
+                    <source src="/assets/WhatsApp Video 2026-07-24 at 8.39.20 PM.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video playback.
+                </video>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.75rem; flex-wrap: wrap;">
+                    <button class="btn btn-primary btn-sm" onclick="toggleVideoFullScreen('ieee-presentation-video')">
+                        <i class="fa-solid fa-expand"></i> Full Screen Video
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleModalFullScreen('ieee-video-modal')">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i> Maximize View
+                    </button>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1rem;">
+                <h4 style="font-size: 1rem; color: var(--text-main); margin-bottom: 0.4rem;">Presentation Overview</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                    Paper presentation highlighting machine learning algorithms, data analytics frameworks, and intelligent predictive modeling techniques evaluated before an international panel of IEEE researchers and academicians.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

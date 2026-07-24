@@ -1,0 +1,11 @@
+{
+  "pythonVersion": "3.14",
+  "pythonPlatform": "Windows",
+  "venvPath": "C:\\Users\\ADMIN\\AppData\\Local\\Python",
+  "extraPaths": [
+    "C:\\Users\\ADMIN\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages"
+  ],
+  "typeCheckingMode": "off",
+  "reportMissingImports": false,
+  "reportMissingModuleSource": false
+}

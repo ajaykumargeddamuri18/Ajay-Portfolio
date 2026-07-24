@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Database (Render creates a fresh one)
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables (keep secrets safe!)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Distribution
+dist/
+build/
+*.egg-info/
