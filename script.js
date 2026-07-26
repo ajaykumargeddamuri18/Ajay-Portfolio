@@ -413,9 +413,21 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ── Self Intro Video Modal ─────────────────────────────── */
 function openSelfIntroModal() {
     const modal = document.getElementById('selfIntroModal');
+    const video = document.getElementById('selfIntroVideo');
     if (!modal) return;
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    
+    if (video) {
+        video.load();
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Auto-play prevented or video loading issue:", error);
+            });
+        }
+    }
+
     // Animate in
     modal.style.opacity = '0';
     requestAnimationFrame(() => {
