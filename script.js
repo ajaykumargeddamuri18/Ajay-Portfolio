@@ -4,6 +4,17 @@
    ========================================================================== */
 
 const certificatesData = {
+  ieee_conference: {
+    title: "IEEE International Research Conference Certificate",
+    issuer: "1st International IEEE Conference Panel",
+    badgeIcon: "fa-solid fa-award",
+    date: "2025",
+    type: "Machine Learning & Predictive Modeling Paper Presentation",
+    details: "Official IEEE conference certification (336.png) awarded for presenting the research paper on Machine Learning algorithms, exploratory telemetry data analytics, and industrial anomaly detection.",
+    verifyId: "IEEE-CONF-2025-336",
+    pdfUrl: "/static/assets/336.png",
+    imageUrl: "/static/assets/336.png"
+  },
   servicenow_sysadmin: {
     title: "Certified System Administrator (CSA)",
     issuer: "ServiceNow",
@@ -80,15 +91,24 @@ window.openCertModal = function(key) {
     document.getElementById('cert-modal-title').textContent = cert.title;
     document.getElementById('cert-modal-issuer').textContent = `${cert.issuer} • ${cert.type}`;
 
-    const pdfButton = cert.pdfUrl ? `
-      <a href="${cert.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-right: 0.5rem; text-decoration: none;">
-        <i class="fa-solid fa-file-pdf"></i> Open Official Certificate PDF
+    const isImage = cert.imageUrl || (cert.pdfUrl && (cert.pdfUrl.endsWith('.png') || cert.pdfUrl.endsWith('.jpg')));
+    const actionUrl = cert.imageUrl || cert.pdfUrl;
+
+    const mediaButton = actionUrl ? `
+      <a href="${actionUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-right: 0.5rem; text-decoration: none;">
+        <i class="fa-solid ${isImage ? 'fa-image' : 'fa-file-pdf'}"></i> Open Official Certificate ${isImage ? 'Image' : 'PDF'}
       </a>
     ` : '';
 
+    const imagePreview = isImage ? `
+      <div style="background: #000; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-glass); margin-bottom: 1.25rem; max-height: 380px; overflow-y: auto;">
+        <img src="${actionUrl}" alt="${cert.title}" style="width: 100%; display: block; object-fit: contain;">
+      </div>
+    ` : '';
+
     const bodyHtml = `
-      <div style="text-align: center; margin-bottom: 1.5rem;">
-        <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(0, 242, 254, 0.15); color: var(--cyan-electric); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 1rem auto; box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);">
+      <div style="text-align: center; margin-bottom: 1.25rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(0, 242, 254, 0.15); color: var(--cyan-electric); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 0.75rem auto; box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);">
           <i class="${cert.badgeIcon}"></i>
         </div>
         <div style="font-size: 0.85rem; color: var(--emerald-neon); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
@@ -96,18 +116,20 @@ window.openCertModal = function(key) {
         </div>
       </div>
 
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem;">
+      ${imagePreview}
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;">
         <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.5rem;">Credential Scope & Competencies:</h4>
-        <p style="font-size: 0.925rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">${cert.details}</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem;">${cert.details}</p>
         
-        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.75rem; border-top: 1px solid var(--border-glass); font-size: 0.85rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.75rem; border-top: 1px solid var(--border-glass); font-size: 0.825rem;">
           <span style="color: var(--text-subtle);">Credential ID: <strong style="color: var(--text-main);">${cert.verifyId}</strong></span>
           <span style="color: var(--text-subtle);">Issued: <strong style="color: var(--text-main);">${cert.date}</strong></span>
         </div>
       </div>
 
       <div style="text-align: center; display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
-        ${pdfButton}
+        ${mediaButton}
         <button class="btn btn-secondary btn-sm" onclick="showToast('Credential verification confirmed!')">
           <i class="fa-solid fa-shield-halved"></i> Verify Credential Status
         </button>
