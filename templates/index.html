@@ -37,6 +37,11 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <button class="btn btn-intro-video" onclick="openSelfIntroModal()" id="btn-self-intro"
+                    style="display:flex;align-items:center;gap:0.45rem;padding:0.5rem 1.1rem;font-size:0.88rem;font-weight:700;border-radius:50px;border:1.5px solid rgba(168,85,247,0.6);background:rgba(168,85,247,0.12);color:#c084fc;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden;">
+                    <span style="width:8px;height:8px;border-radius:50%;background:#a855f7;box-shadow:0 0 8px #a855f7;animation:pulseDot 2s infinite;flex-shrink:0;"></span>
+                    <i class="fa-solid fa-circle-play"></i> Intro Video
+                </button>
                 <button class="btn btn-primary btn-sm" onclick="openResumeModal()">
                     <i class="fa-solid fa-file-lines"></i> Resume
                 </button>
@@ -46,6 +51,45 @@
             </div>
         </div>
     </header>
+
+    <!-- Self Intro Video Modal -->
+    <div id="selfIntroModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(3,7,18,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);align-items:center;justify-content:center;">
+        <div style="position:relative;width:90%;max-width:860px;background:rgba(15,23,42,0.95);border:1px solid rgba(168,85,247,0.35);border-radius:20px;overflow:hidden;box-shadow:0 0 60px rgba(168,85,247,0.25),0 0 120px rgba(56,189,248,0.1);">
+            <!-- Modal Header -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.08);background:rgba(168,85,247,0.08);">
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                    <div style="width:10px;height:10px;border-radius:50%;background:#a855f7;box-shadow:0 0 10px #a855f7;animation:pulseDot 2s infinite;"></div>
+                    <span style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:#fff;">Ajay Kumar Geddamuri</span>
+                    <span style="font-size:0.78rem;color:#94a3b8;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);padding:0.2rem 0.7rem;border-radius:20px;">Self Introduction</span>
+                </div>
+                <button onclick="closeSelfIntroModal()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#94a3b8;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='rgba(239,68,68,0.2)';this.style.color='#f87171'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.color='#94a3b8'">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- Video Player -->
+            <div style="position:relative;background:#000;">
+                <video id="selfIntroVideo" controls style="width:100%;display:block;max-height:520px;outline:none;" preload="metadata">
+                    <source src="/static/assets/self_intro.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <!-- Modal Footer -->
+            <div style="padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;border-top:1px solid rgba(255,255,255,0.06);">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <img src="/static/assets/avatar.png" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid rgba(168,85,247,0.5);" alt="Ajay">
+                    <div>
+                        <div style="font-size:0.85rem;font-weight:700;color:#fff;">Ajay Kumar Geddamuri</div>
+                        <div style="font-size:0.72rem;color:#94a3b8;">Software Engineer & Data Science Specialist</div>
+                    </div>
+                </div>
+                <div style="margin-left:auto;display:flex;gap:0.6rem;">
+                    <a href="#contact" onclick="closeSelfIntroModal()" style="display:flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;border-radius:50px;background:linear-gradient(135deg,#a855f7,#38bdf8);color:#fff;font-size:0.82rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;">
+                        <i class="fa-solid fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- HERO SECTION (SEOWINS.io Cyber Blue UI Layout) -->

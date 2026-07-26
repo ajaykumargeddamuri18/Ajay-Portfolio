@@ -409,3 +409,45 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypewriter();
     initVisitorAnalytics();
 });
+
+/* ── Self Intro Video Modal ─────────────────────────────── */
+function openSelfIntroModal() {
+    const modal = document.getElementById('selfIntroModal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    // Animate in
+    modal.style.opacity = '0';
+    requestAnimationFrame(() => {
+        modal.style.transition = 'opacity 0.3s ease';
+        modal.style.opacity = '1';
+    });
+    // Close on backdrop click
+    modal.addEventListener('click', function handleBackdrop(e) {
+        if (e.target === modal) {
+            closeSelfIntroModal();
+            modal.removeEventListener('click', handleBackdrop);
+        }
+    });
+}
+
+function closeSelfIntroModal() {
+    const modal = document.getElementById('selfIntroModal');
+    const video = document.getElementById('selfIntroVideo');
+    if (!modal) return;
+    // Pause video when closing
+    if (video) { video.pause(); }
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('selfIntroModal');
+        if (modal && modal.style.display === 'flex') closeSelfIntroModal();
+    }
+});

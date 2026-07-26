@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5 {
 .gradient-headline {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -125,6 +126,7 @@ h1, h2, h3, h4, h5 {
 .gradient-text-alt {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -629,6 +631,7 @@ h1, h2, h3, h4, h5 {
 .typing-text {
   background: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #10b981 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
   word-break: break-word;
