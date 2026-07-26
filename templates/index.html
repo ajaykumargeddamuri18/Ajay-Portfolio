@@ -332,6 +332,22 @@
                                     <div class="info-val">Data Science Intern @ Genz Educate</div>
                                 </div>
                             </div>
+
+                            <!-- Embedded Video Player inside Right Highlight Card -->
+                            <div style="margin-top: 0.75rem; background: rgba(3, 7, 18, 0.85); border: 1.5px solid rgba(168, 85, 247, 0.5); border-radius: 14px; padding: 0.75rem; box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                    <span style="font-size: 0.82rem; font-weight: 700; color: #c084fc; display: flex; align-items: center; gap: 0.4rem;">
+                                        <i class="fa-solid fa-circle-play"></i> Video Introduction
+                                    </span>
+                                    <button onclick="openSelfIntroModal()" style="background: rgba(168,85,247,0.3); border: 1px solid rgba(168,85,247,0.5); color: #fff; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.72rem; font-weight: 700; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.6)'" onmouseout="this.style.background='rgba(168,85,247,0.3)'">
+                                        Fullscreen
+                                    </button>
+                                </div>
+                                <video id="highlightEmbeddedVideo" controls preload="metadata" style="width: 100%; border-radius: 8px; display: block; max-height: 220px; outline: none; background: #000;">
+                                    <source src="/static/assets/self_intro.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
