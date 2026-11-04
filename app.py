@@ -140,7 +140,10 @@ def home():
 
 @app.route('/assets/<path:filename>')
 def serve_assets(filename):
-    return send_from_directory(os.path.join(BASE_DIR, 'static', 'assets'), filename)
+    static_assets = os.path.join(BASE_DIR, 'static', 'assets')
+    if os.path.exists(os.path.join(static_assets, filename)):
+        return send_from_directory(static_assets, filename)
+    return send_from_directory(os.path.join(BASE_DIR, 'assets'), filename)
 
 @app.route('/api/projects', methods=['GET'])
 def api_projects():
