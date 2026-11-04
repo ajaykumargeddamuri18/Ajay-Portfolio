@@ -485,3 +485,60 @@ document.addEventListener('keydown', (e) => {
         if (modal && modal.style.display === 'flex') closeSelfIntroModal();
     }
 });
+
+
+/* ==========================================================================
+   RESPONSIVE NAVIGATION FIX  (append-only; nothing above was changed)
+   --------------------------------------------------------------------------
+   initNavigation() above is registered on DOMContentLoaded twice, so the
+   hamburger gets two click handlers and one tap toggles the menu open and
+   straight back closed. This capture-phase handler runs first, stops the
+   duplicate handlers on the button, and toggles the menu exactly once.
+   It also closes the menu on outside click, Escape, and when the window is
+   resized back to desktop width.
+   ========================================================================== */
+(function responsiveNavFix() {
+    const MOBILE_NAV_MAX = 1100; // keep in sync with the hamburger breakpoint in styles.css
+
+    function setMenu(open) {
+        const menu = document.querySelector('.nav-menu');
+        const burger = document.querySelector('.hamburger');
+        if (!menu || !burger) return;
+
+        menu.classList.toggle('active', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+        const icon = burger.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars', !open);
+            icon.classList.toggle('fa-xmark', open);
+        }
+    }
+
+    // Toggle once per tap (capture phase on document runs before the button's own listeners)
+    document.addEventListener('click', function (e) {
+        const burger = e.target.closest('.hamburger');
+        if (!burger) return;
+
+        e.stopPropagation();
+        const menu = document.querySelector('.nav-menu');
+        if (!menu) return;
+        setMenu(!menu.classList.contains('active'));
+    }, true);
+
+    // Tapping a menu link or anywhere outside the menu closes it
+    document.addEventListener('click', function (e) {
+        const menu = document.querySelector('.nav-menu');
+        if (!menu || !menu.classList.contains('active')) return;
+        if (e.target.closest('.hamburger')) return;
+        if (e.target.closest('.nav-link') || !e.target.closest('.nav-menu')) setMenu(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > MOBILE_NAV_MAX) setMenu(false);
+    });
+})();
